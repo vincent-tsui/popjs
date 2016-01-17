@@ -1,0 +1,80 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family:'helvetica neue','hiragino sans gb',stheiti,'microsoft yahei',\5FAE\8F6F\96C5\9ED1,tahoma,sans-serif; 
+	background: #ccc;
+	font-size: 14px;
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #666;
+}
+a:hover{
+	color: #999;
+}
+.clearfix:after {
+  content:".";
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden;
+}
+.clearfix {
+  display:inline-block;
+} /*Those two .clearfix have to be separate!)*/
+.clearfix {
+  display:block;
+}
+.container{
+	position: relative;
+	max-width: 640px;
+	margin: 0 auto;
+}
+.container ul{
+	margin-bottom: 200px;
+}
+.container h1{
+	padding: 100px 0;
+	text-align: center;
+	font-size: 50px;
+	color: #333;
+	text-shadow: 1px 1px 5px #000;
+}
+.container li{
+	float: left;
+	width: 20%;
+	margin: 0 2.5%;
+	text-align: center;
+}
+.container li a{
+	display: block;
+	line-height: 40px;
+	border: 1px solid #666;
+	border-radius: 10px;
+	text-shadow: 1px 1px 3px #fff;
+	box-shadow: 1px 1px 3px #fff;
+	-webkit-transition: color .3s;
+  	-webkit-appearance: none; 
+}
+
+.copyright{
+	color: #fff;
+	text-align: center;
+	text-shadow: 1px 1px 1px #000;
+}
+.copyright a{
+	color: #fff;
+}
+
+
+
+
+
+
+
+

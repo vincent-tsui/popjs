@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Popjs demo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="pop.css">
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
+	<script type="text/javascript" src="pop.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/animate.css/3.1.0/animate.min.css">
+	<!-- demo页样式 S-->
+	<link rel="stylesheet" type="text/css" href="demo.css">
+	<!-- demo页样式 E-->
+</head>
+<body>
+	<div class="container">
+		<h1>POPJS</h1>
+		<ul class="clearfix">
+			<li><a href="javascript:;" id="btn-alert">alert</a></li>
+			<li><a href="javascript:;" id="btn-confirm">confirm</a></li>
+			<li><a href="javascript:;" id="btn-error">error</a></li>
+			<li><a href="javascript:;" id="btn-loading">loading</a></li>
+		</ul>
+		<div class="copyright">Powered by <a href="https://github.com/vincent-tsui/">Vincent Tsui</a></div>
+	</div>
+	<script type="text/javascript">
+
+		$('#btn-alert').click(function(){
+			pop.alert('This is an alert', 'Hi guys', {btnName : 'Hi there'},function(){
+				pop.error('You clicked the alert.')
+			});
+		})
+
+		$('#btn-confirm').click(function(){
+			pop.confirm('This is a confirm', 'R U okey?', {btnName : ['Ok', 'No']},function(res){
+				res ? pop.error('You clicked the Ok.') : pop.error('You clicked the No.');
+			});
+		})
+
+		$('#btn-error').click(function(){
+			pop.error('This is an error', {sec : 5},function(){
+				pop.error('The error is closed.')
+			});
+		})
+
+		$('#btn-loading').click(function(){
+			pop.loading('This is a loading', {className : 'animated bounceIn'});
+			setTimeout(function(){
+				pop.clear();
+			}, 5000)
+		})
+
+	</script>
+</body>
+</html>
